@@ -108,15 +108,15 @@ case 4:
     }
 }
 console.log(lineType);
-sig.padEnd((content.length), ' ')
-let fullLine = ''
-fullLine.padStart((content.length + 2), lineType)
-console.log(fullLine);
-content.padStart((content.length+1), paddingType)
-content.padEnd((content.length+1), paddingType)
-sig.padStart((sig.length+1), paddingType)
-content.padEnd((sig.length+1), paddingType)
-content = fullLine + '\n' + content + `\n` + sig + `\n`;
+sig = sig.padEnd((content.length), ' ');
+let fullLine = lineType;
+fullLine = fullLine.padStart((content.length + 2), lineType);
+console.log(content.length);
+content = content.padStart((content.length+1), paddingType);
+content = content.padEnd((content.length+1), paddingType);
+sig = sig.padStart((sig.length+1), paddingType);
+content = content.padEnd((sig.length+1), paddingType);
+content = fullLine + '\n' + content + `\n` + sig + `\n` + fullLine;
 
 return content;
 }
