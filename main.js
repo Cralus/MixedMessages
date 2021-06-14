@@ -1,0 +1,1 @@
+// main message configuration file
