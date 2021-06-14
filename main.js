@@ -74,37 +74,44 @@ let rand = Math.floor(Math.random() * 5)
 switch(rand){
 case 0:
     {
+        console.log(rand)
         lineType = `=`
         paddingType = '#'
     }
     break;
 case 1:
     {
+        console.log(rand)
         lineType = `-`
         paddingType = `$`
     }
     break;
 case 2:
     {
+        console.log(rand)
         lineType = `~`
         paddingType = `+`
     }
     break;
 case 3:
     {
+        console.log(rand)
         lineType = `¬`
         paddingType = `@`
     }
     break;
 case 4:
     {
+        console.log(rand)
         lineType = `_`
         paddingType = `|`
     }
 }
+console.log(lineType);
 sig.padEnd((content.length), ' ')
 let fullLine = ''
 fullLine.padStart((content.length + 2), lineType)
+console.log(fullLine);
 content.padStart((content.length+1), paddingType)
 content.padEnd((content.length+1), paddingType)
 sig.padStart((sig.length+1), paddingType)
