@@ -115,7 +115,7 @@ console.log(content.length);
 content = content.padStart((content.length+1), paddingType);
 content = content.padEnd((content.length+1), paddingType);
 sig = sig.padStart((sig.length+1), paddingType);
-content = content.padEnd((sig.length+1), paddingType);
+sig = sig.padEnd((sig.length+1), paddingType);
 content = fullLine + '\n' + content + `\n` + sig + `\n` + fullLine;
 
 return content;
