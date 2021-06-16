@@ -120,10 +120,11 @@ content = fullLine + '\n' + content + `\n` + sig + `\n` + fullLine;
 
 return content;
 }
-console.log(genFormat(genContent(), genSig()))
+
 const output = (content) => {
-    console.log()
+    const el = document.getElementById('message')
+    el.innerHTML = content;
 }
 
-
+output(genFormat(genContent(), genSig()));
 
