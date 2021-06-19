@@ -75,37 +75,27 @@ let rand = Math.floor(Math.random() * 5)
 switch(rand){
 case 0:
     {
-        console.log(rand)
-        lineType = `=`
-        paddingType = '#'
+        el.style.color = "blue";
     }
     break;
 case 1:
     {
-        console.log(rand)
-        lineType = `-`
-        paddingType = `$`
+        el.style.color = "red";
     }
     break;
 case 2:
     {
-        console.log(rand)
-        lineType = `~`
-        paddingType = `+`
+        el.style.color = "green";
     }
     break;
 case 3:
     {
-        console.log(rand)
-        lineType = `¬`
-        paddingType = `@`
+        el.style.color = "aqua";
     }
     break;
 case 4:
     {
-        console.log(rand)
-        lineType = `_`
-        paddingType = `|`
+        el.style.color = "fuchsia";
     }
 }
 console.log(lineType);
@@ -114,7 +104,7 @@ sig = sig.padEnd((content.length), ' ');
 
 console.log(content.length);
 
-content =  content + `\n` + sig;
+content =  content + "<p>" + sig +"</p>";
 
 return content;
 }
