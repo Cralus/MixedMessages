@@ -1,5 +1,6 @@
 // main message configuration file
 
+const el = document.getElementById('message')
 const genContent = () =>{
     let message = '';
     let rand = Math.floor(Math.random() * 5)
@@ -109,22 +110,19 @@ case 4:
 }
 console.log(lineType);
 sig = sig.padEnd((content.length), ' ');
-let fullLine = lineType;
-fullLine = fullLine.padStart((content.length + 2), lineType);
+
+
 console.log(content.length);
-content = content.padStart((content.length+1), paddingType);
-content = content.padEnd((content.length+1), paddingType);
-sig = sig.padStart((sig.length+1), paddingType);
-sig = sig.padEnd((sig.length+1), paddingType);
-content = fullLine + '\n' + content + `\n` + sig + `\n` + fullLine;
+
+content =  content + `\n` + sig;
 
 return content;
 }
 
-const output = (content) => {
-    const el = document.getElementById('message')
+const output = (content, el) => {
+    
     el.innerHTML = content;
 }
 
-output(genFormat(genContent(), genSig()));
+output(genFormat(genContent(), genSig()), el);
 
