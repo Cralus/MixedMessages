@@ -1,6 +1,7 @@
 // main message configuration file
 
 const el = document.getElementById('message')
+const changeButton = document.getElementById('change')
 const genContent = () =>{
     let message = '';
     let rand = Math.floor(Math.random() * 5)
@@ -69,8 +70,6 @@ const genSig = () =>
 }
 const genFormat = (content, sig) =>
 {
-let lineType = '';
-let paddingType = '';
 let rand = Math.floor(Math.random() * 5)
 switch(rand){
 case 0:
@@ -104,7 +103,7 @@ case 4:
         el.style.border = "5px solid red"
     }
 }
-console.log(lineType);
+
 sig = sig.padEnd((content.length), ' ');
 
 
@@ -119,6 +118,7 @@ const output = (content, el) => {
     
     el.innerHTML = content;
 }
-
-output(genFormat(genContent(), genSig()), el);
+const func = () => output(genFormat(genContent(), genSig()), el);
+func();
+changeButton.onclick = func;
 
