@@ -76,26 +76,32 @@ switch(rand){
 case 0:
     {
         el.style.color = "blue";
+        el.style.border = "solid"
     }
     break;
 case 1:
     {
         el.style.color = "red";
+        el.style.border = "rounded"
     }
     break;
 case 2:
     {
         el.style.color = "green";
+        el.style.border = "dashed"
     }
     break;
 case 3:
     {
         el.style.color = "aqua";
+        el.style.borderColor ="red"
+        el.style.border = "dashed"
     }
     break;
 case 4:
     {
         el.style.color = "fuchsia";
+        el.style.border = "5px solid red"
     }
 }
 console.log(lineType);
@@ -104,7 +110,7 @@ sig = sig.padEnd((content.length), ' ');
 
 console.log(content.length);
 
-content =  content + "<p>" + sig +"</p>";
+content = "<p>" + content + "</p>" + "<p>" + sig +"</p>";
 
 return content;
 }
