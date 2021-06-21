@@ -1,6 +1,6 @@
 # Mixed Messages extension project #
 
-## for the codeacademy full stack developer path I have expanded on the initial brief ##
+## For the codeacademy full stack developer path I have expanded on the initial brief ##
 
 The following extensions have been implemented
 
